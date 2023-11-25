@@ -1,0 +1,92 @@
+{
+  "product": {
+    "name": "Lynx UI",
+    "description": "🥇 Lynx UI is a modern and user-friendly Blogger Template offering a lot of customisable Plugins. We have made a lot of changes in version 2.7.0 based on your suggestions. We have fixed some bugs in this version as well as optimised the overall experience.",
+    "keywords": [
+      "Lynx UI Blogger Template",
+      "Lynx UI, Blogger Theme",
+      "Lynx UI 2.7"
+    ],
+    "images": [
+      {
+        "src": "",
+        "sizes": "",
+        "type": "image/png"
+      }
+    ],
+    "type": "template",
+    "version": "2.7.0",
+    "changelogs": [
+      {
+        "type": "fixed",
+        "changes": []
+      },
+      {
+        "type": "deprecated",
+        "changes": []
+      }
+    ],
+    "date": "",
+    "versions": [
+      {
+        "version": "2.6.2",
+        "date": ""
+      },
+      {
+        "version": "2.6.1",
+        "date": ""
+      },
+      {
+        "version": "2.6.0",
+        "date": ""
+      }
+    ],
+    "platform": {
+      "name": "Blogger",
+      "url": "https://www.blogger.com"
+    }
+  },
+  "organization": {
+    "name": "Netwem Design",
+    "website": "https://netwem.com",
+    "blog": "https://www.netwem.com",
+    "api": "https://api.netwem.com",
+    "dev": "https://dev.netwem.com",
+    "developers": [
+      {
+        "name": "LinxFord",
+        "uri": "https://www.netwem.com/admins/LinxFord"
+      },
+      {
+        "name": "Redemption",
+        "uri": "https://www.netwem.com/authors/Redemption"
+      }
+    ],
+    "pages": {
+      "contact": {
+        "title": "Contact",
+        "url": "https://dev.netwem.com/contact",
+        "description": "",
+        "keywords": []
+      },
+      "privacy": {
+        "title": "Privacy",
+        "url": "https://dev.netwem.com/privacy",
+        "description": "",
+        "keywords": []
+      },
+      "sign-up": {
+        "title": "Sign Up",
+        "url": "https://dev.netwem.com/sign-up",
+        "description": "",
+        "keywords": []
+      },
+      "sign-in": {
+        "title": "Sign In",
+        "url": "https://dev.netwem.com/sign-in",
+        "description": "",
+        "keywords": []
+      }
+    }
+  }
+}
