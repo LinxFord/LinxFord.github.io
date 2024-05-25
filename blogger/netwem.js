@@ -40,3 +40,28 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
     };
     xhr.send(JSON.stringify({ siteUrl: window.location.href }));
 })();
+
+
+(function() {
+  let appUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; 
+    var xhr = new XMLHttpRequest();
+    var trackingUrl = appUrl;
+    xhr.open("POST", trackingUrl, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('Tracking data sent successfully:', xhr.responseText);
+            } else {
+                console.error('Error sending tracking data:', xhr.status, xhr.statusText);
+            }
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Request failed');
+    };
+
+    xhr.send(JSON.stringify({ siteUrl: window.location.href }));
+})();
