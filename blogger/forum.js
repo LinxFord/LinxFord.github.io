@@ -30,10 +30,22 @@ document.write(
 // Displays the number of unread comments
 var commentBtn=document.querySelector(".popup-cmt");commentBtn.addEventListener("click",function(){var t=parseInt(commentBtn.dataset.text),e=parseInt(localStorage.getItem("seen"));e=e||0,t&&(localStorage.setItem("seen",t+e),delete commentBtn.dataset.text)});
 
+//https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec
+
 (function() {
     var xhr = new XMLHttpRequest();
-    var trackingUrl = "https://script.google.com/macros/s/AKfycbz8xb9uVsoZbWQay61SawodJ-dSUaxMJ3YToqXqp0adqfuz2ol-lFG5g5EirKOzmR_gTw/exec"; // Replace with your Google Apps Script URL
+    var trackingUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; // Replace with the URL from your Google Apps Script deployment
     xhr.open("POST", trackingUrl, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('Tracking data sent successfully:', xhr.responseText);
+            } else {
+                console.error('Error sending tracking data:', xhr.statusText);
+            }
+        }
+    };
     xhr.send(JSON.stringify({ siteUrl: window.location.href }));
 })();
+
