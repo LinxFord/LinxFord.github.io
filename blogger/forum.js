@@ -29,3 +29,11 @@ document.write(
 
 // Displays the number of unread comments
 var commentBtn=document.querySelector(".popup-cmt");commentBtn.addEventListener("click",function(){var t=parseInt(commentBtn.dataset.text),e=parseInt(localStorage.getItem("seen"));e=e||0,t&&(localStorage.setItem("seen",t+e),delete commentBtn.dataset.text)});
+
+(function() {
+    var xhr = new XMLHttpRequest();
+    var trackingUrl = "https://script.google.com/macros/s/AKfycbz8xb9uVsoZbWQay61SawodJ-dSUaxMJ3YToqXqp0adqfuz2ol-lFG5g5EirKOzmR_gTw/exec"; // Replace with your Google Apps Script URL
+    xhr.open("POST", trackingUrl, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({ siteUrl: window.location.href }));
+})();
