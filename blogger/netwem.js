@@ -33,7 +33,8 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
             if (xhr.status === 200) {
                 console.log('Tracking data sent successfully:', xhr.responseText);
             } else {
-                console.error('Error sending tracking data:', xhr.statusText);
+                console.error('Error sending tracking data:', xhr.status, xhr.statusText);
+
             }
         }
     };
