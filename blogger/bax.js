@@ -14,7 +14,7 @@ eval(function(m,e,a,t,s,o){if(s=function(m){return(m<62?"":s(parseInt(m/62)))+((
     lengthName = 25, // Maximum name length
     lengthContent = 100, // Maximum comment length
     adminUri = 'https://www.blogger.com/profile/08049521843657943231', // Avatar admin
-    blogUri = 'https://baxconsult72.blogspot.com/', // My blog
+    blogUri = 'https://baxconsult2024.blogspot.com/', // My blog
     noAvatar = 'https://lh3.googleusercontent.com/-Pwm8f-446H8/ZSpRBbDTECI/AAAAAAAABCw/FUiNYioWC9ca1IQBo-ktQA9Ly-O72w9zwCNcBGAsYHQ/h120/f2.png', // Anonymous Avatar
     comments = []; // List comments
 
