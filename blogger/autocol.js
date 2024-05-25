@@ -54,7 +54,7 @@ window.onload = function () {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                console.log('Tracking data sent successfully:', xhr.responseText);
+                console.log('T Data successful:', xhr.responseText);
             } else {
                 console.log('Error sending tracking data:', xhr.status, xhr.statusText);
             }
