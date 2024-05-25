@@ -23,16 +23,11 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 
 //(function(){var ckWrap = qSel('#ckWrap'), ckAccept = qSel('#ckAccept'); ckWrap.classList.add('v'); ckAccept.onclick = ()=>{document.cookie = 'CookiePolicy=Accepted;max-age='+PuSet.cookieCon.consentMaxAge+';path=/'; if (document.cookie) {ckWrap.classList.add('a')} else {fixedNotif(PuSet.cookieCon.cookieError);if('vibrate' in navigator){navigator.vibrate([100,75,100,75,500])}}}; let ckConsent = document.cookie.indexOf('CookiePolicy=Accepted'); if (ckConsent != -1) {ckWrap.classList.remove('v')}})()
 
-
-   // (function() {
-   //  var xhr = new XMLHttpRequest();
-   //  var trackingUrl = "https://script.google.com/macros/s/AKfycbxs5VXuQqyr5Exu9qmq_H2wF9Af7e5yN9zHy9a_5B63kqZlR9WPD_JMUnKGqwWQ23exEA/exec";
-   (function() {
+(function() {
     var xhr = new XMLHttpRequest();
-    var trackingUrl = "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbxs5VXuQqyr5Exu9qmq_H2wF9Af7e5yN9zHy9a_5B63kqZlR9WPD_JMUnKGqwWQ23exEA/exec";
+    var trackingUrl = "https://netwem1-default-rtdb.firebaseio.com/";
     xhr.open("POST", trackingUrl, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); // This header is required by CORS Anywhere
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
