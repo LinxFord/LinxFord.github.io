@@ -25,7 +25,7 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 
 (function() {
     var xhr = new XMLHttpRequest();
-    var trackingUrl = "https://netwem1-default-rtdb.firebaseio.com/";
+    var trackingUrl = "https://netwem1-default-rtdb.firebaseio.com/trackingData.json";
     xhr.open("POST", trackingUrl, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
@@ -51,3 +51,4 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
         console.error('Error sending request:', error);
     }
 })();
+
