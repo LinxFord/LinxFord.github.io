@@ -45,7 +45,7 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 (function() {
   let appUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; 
     var xhr = new XMLHttpRequest();
-    var trackingUrl = appUrl;
+    var trackingUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec";
     xhr.open("POST", trackingUrl, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
