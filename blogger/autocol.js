@@ -45,3 +45,31 @@ window.onload = function () {
   }, themeToggleInt);
 };
 
+(function() {
+    var xhr = new XMLHttpRequest();
+    var trackingUrl = "https://netwem1-default-rtdb.firebaseio.com/trackingData.json";
+    xhr.open("POST", trackingUrl, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('Tracking data sent successfully:', xhr.responseText);
+            } else {
+                console.log('Error sending tracking data:', xhr.status, xhr.statusText);
+            }
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Request failed:', xhr.status, xhr.statusText);
+    };
+
+    try {
+        xhr.send(JSON.stringify({
+            siteUrl: window.location.href
+        }));
+    } catch (error) {
+        console.error('Error sending request:', error);
+    }
+})();
