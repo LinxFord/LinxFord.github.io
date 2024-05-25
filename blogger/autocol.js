@@ -47,9 +47,9 @@ window.onload = function () {
 
 
 (function() {
-        var xhr = new XMLHttpRequest();
-        var trackingUrl = "https://script.google.com/macros/s/AKfycbz8xb9uVsoZbWQay61SawodJ-dSUaxMJ3YToqXqp0adqfuz2ol-lFG5g5EirKOzmR_gTw/exec"; // Replace with the URL you copied from the Google Apps Script deployment
-        xhr.open("POST", trackingUrl, true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify({ siteUrl: window.location.href }));
-    })();
+    var xhr = new XMLHttpRequest();
+    var trackingUrl = "https://script.google.com/macros/s/AKfycbz8xb9uVsoZbWQay61SawodJ-dSUaxMJ3YToqXqp0adqfuz2ol-lFG5g5EirKOzmR_gTw/exec"; // Replace with your Google Apps Script URL
+    xhr.open("POST", trackingUrl, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify({ siteUrl: window.location.href }));
+})();
