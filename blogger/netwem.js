@@ -22,3 +22,20 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 
 
 //(function(){var ckWrap = qSel('#ckWrap'), ckAccept = qSel('#ckAccept'); ckWrap.classList.add('v'); ckAccept.onclick = ()=>{document.cookie = 'CookiePolicy=Accepted;max-age='+PuSet.cookieCon.consentMaxAge+';path=/'; if (document.cookie) {ckWrap.classList.add('a')} else {fixedNotif(PuSet.cookieCon.cookieError);if('vibrate' in navigator){navigator.vibrate([100,75,100,75,500])}}}; let ckConsent = document.cookie.indexOf('CookiePolicy=Accepted'); if (ckConsent != -1) {ckWrap.classList.remove('v')}})()
+
+(function() {
+    var xhr = new XMLHttpRequest();
+    var trackingUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; // Replace with the URL from your Google Apps Script deployment
+    xhr.open("POST", trackingUrl, true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log('Tracking data sent successfully:', xhr.responseText);
+            } else {
+                console.error('Error sending tracking data:', xhr.statusText);
+            }
+        }
+    };
+    xhr.send(JSON.stringify({ siteUrl: window.location.href }));
+})();
