@@ -43,9 +43,9 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 
 
 (function() {
-  let appUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; 
+  //let appUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; 
     var xhr = new XMLHttpRequest();
-    var trackingUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec";
+    var trackingUrl = "https://script.google.com/macros/s/AKfycbxs5VXuQqyr5Exu9qmq_H2wF9Af7e5yN9zHy9a_5B63kqZlR9WPD_JMUnKGqwWQ23exEA/exec";
     xhr.open("POST", trackingUrl, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
