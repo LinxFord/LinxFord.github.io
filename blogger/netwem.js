@@ -43,7 +43,6 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 
 
 (function() {
-  //let appUrl = "https://script.google.com/macros/s/AKfycbzBODOC9zNKI_wDMq_kfwEB2QfaRhAgGf4D5gswLeHpn6KowbRKpnKCgCzwW7gr5SFh3g/exec"; 
     var xhr = new XMLHttpRequest();
     var trackingUrl = "https://script.google.com/macros/s/AKfycbxs5VXuQqyr5Exu9qmq_H2wF9Af7e5yN9zHy9a_5B63kqZlR9WPD_JMUnKGqwWQ23exEA/exec";
     xhr.open("POST", trackingUrl, true);
@@ -54,14 +53,20 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
             if (xhr.status === 200) {
                 console.log('Tracking data sent successfully:', xhr.responseText);
             } else {
-                console.error('Error sending tracking data:', xhr.status, xhr.statusText);
+                console.log('Error sending tracking data:', xhr.status, xhr.statusText);
             }
         }
     };
 
     xhr.onerror = function() {
-        console.error('Request failed');
+        console.error('Request failed:', xhr.status, xhr.statusText);
     };
 
-    xhr.send(JSON.stringify({ siteUrl: window.location.href }));
+    try {
+        xhr.send(JSON.stringify({
+            siteUrl: window.location.href
+        }));
+    } catch (error) {
+        console.error('Error sending request:', error);
+    }
 })();
