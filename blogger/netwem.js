@@ -23,32 +23,32 @@ function innerTotalComments(e){var t=parseInt(e.feed.openSearch$totalResults.$t)
 
 //(function(){var ckWrap = qSel('#ckWrap'), ckAccept = qSel('#ckAccept'); ckWrap.classList.add('v'); ckAccept.onclick = ()=>{document.cookie = 'CookiePolicy=Accepted;max-age='+PuSet.cookieCon.consentMaxAge+';path=/'; if (document.cookie) {ckWrap.classList.add('a')} else {fixedNotif(PuSet.cookieCon.cookieError);if('vibrate' in navigator){navigator.vibrate([100,75,100,75,500])}}}; let ckConsent = document.cookie.indexOf('CookiePolicy=Accepted'); if (ckConsent != -1) {ckWrap.classList.remove('v')}})()
 
-(function() {
-    var xhr = new XMLHttpRequest();
-    var trackingUrl = "https://netwem1-default-rtdb.firebaseio.com/trackingData.json";
-    xhr.open("POST", trackingUrl, true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+// (function() {
+//     var xhr = new XMLHttpRequest();
+//     var trackingUrl = "https://netwem1-default-rtdb.firebaseio.com/trackingData.json";
+//     xhr.open("POST", trackingUrl, true);
+//     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                console.log('Tracking data sent successfully:', xhr.responseText);
-            } else {
-                console.log('Error sending tracking data:', xhr.status, xhr.statusText);
-            }
-        }
-    };
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState === 4) {
+//             if (xhr.status === 200) {
+//                 console.log('Tracking data sent successfully:', xhr.responseText);
+//             } else {
+//                 console.log('Error sending tracking data:', xhr.status, xhr.statusText);
+//             }
+//         }
+//     };
 
-    xhr.onerror = function() {
-        console.error('Request failed:', xhr.status, xhr.statusText);
-    };
+//     xhr.onerror = function() {
+//         console.error('Request failed:', xhr.status, xhr.statusText);
+//     };
 
-    try {
-        xhr.send(JSON.stringify({
-            siteUrl: window.location.href
-        }));
-    } catch (error) {
-        console.error('Error sending request:', error);
-    }
-})();
+//     try {
+//         xhr.send(JSON.stringify({
+//             siteUrl: window.location.href
+//         }));
+//     } catch (error) {
+//         console.error('Error sending request:', error);
+//     }
+// })();
 
